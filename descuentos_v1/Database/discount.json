@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6346e54554e230abc6612c60"
+  },
+  "Console": "OTRA",
+  "Discount": 10,
+  "Maximum_price": 1000000,
+  "Minimal_price": 500000
+},{
+  "_id": {
+    "$oid": "6346e4f054e230abc6612c5e"
+  },
+  "Console": "PC",
+  "Discount": 15,
+  "Maximum_price": 0,
+  "Minimal_price": 150000
+},{
+  "_id": {
+    "$oid": "6346e4dd54e230abc6612c5c"
+  },
+  "Console": "XBOX",
+  "Discount": 7,
+  "Maximum_price": 150000,
+  "Minimal_price": 100001
+},{
+  "_id": {
+    "$oid": "634845e354e230abc6612c6a"
+  },
+  "Console": "PS4",
+  "Discount": 5,
+  "Maximum_price": 0,
+  "Minimal_price": 100000
+}]

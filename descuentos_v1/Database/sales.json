@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6348b7fa0a515afc7ad7a69d"
+  },
+  "Console": "PS4",
+  "Value": 100000,
+  "Value_Paid_Out": 95000
+},{
+  "_id": {
+    "$oid": "6348b81b0a515afc7ad7a69e"
+  },
+  "Console": "PS4",
+  "Value": 110000,
+  "Value_Paid_Out": 104500
+},{
+  "_id": {
+    "$oid": "6349bf75464e547050481bf8"
+  },
+  "Console": "PS4",
+  "Value": 100000,
+  "Value_Paid_Out": 95000
+},{
+  "_id": {
+    "$oid": "6349c05900515ab6da79df34"
+  },
+  "Console": "PS4",
+  "Value": 100000,
+  "Value_Paid_Out": 95000
+},{
+  "_id": {
+    "$oid": "6349c2f877724e0926ce474d"
+  },
+  "Console": "PS4",
+  "Value": 100000,
+  "Value_Paid_Out": 95000
+}]
