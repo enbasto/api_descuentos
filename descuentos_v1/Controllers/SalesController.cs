@@ -24,8 +24,8 @@ namespace WSDISCOUNT.Controllers
             try
             {
                 var Identity = HttpContext.User.Identity as ClaimsIdentity;
-                TokenServices tokenServices = new TokenServices(_UsersService);
-                var Token = tokenServices.validarToken(Identity);
+                TokenServices TokenServices = new TokenServices(_UsersService);
+                var Token = TokenServices.validateToken(Identity);
                 if (!Token.Validacion)
                 {
                     return Ok(Token);

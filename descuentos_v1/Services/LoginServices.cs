@@ -18,11 +18,8 @@ namespace WSDISCOUNT.Services
             await _ConectCollection.Find(_ => true).ToListAsync();
         public async Task<Users?> GetUser(string user, string pass)
         {
-            // return await _ConectCollection.Find(x => (x.Usuario == user)).FirstOrDefaultAsync();
             var builder = Builders<Users>.Filter;
-            var filter = builder.Eq("Usuario", user) & builder.Eq("Password", pass);
-            
-
+            var filter = builder.Eq("Usuario", user) & builder.Eq("Password", pass);          
             return await _ConectCollection.Find(filter).FirstOrDefaultAsync();
         }
         public async Task<Users?> GetUserValidation(string id)

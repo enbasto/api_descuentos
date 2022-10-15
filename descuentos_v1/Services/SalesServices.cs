@@ -16,10 +16,8 @@ namespace WSDISCOUNT.Services
         }
         public async Task<List<Sales>> GetSales()=>
             await _ConectCollection.Find(_ => true).ToListAsync();
-        public async Task CreateSalesAsync(Sales newSales)
-        {
+        public async Task CreateSalesAsync(Sales newSales)=>
             await _ConectCollection.InsertOneAsync(newSales);
-        }
        
     }
 }

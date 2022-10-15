@@ -9,18 +9,20 @@ namespace WSDISCOUNT.Services
         {
             _UsersService = UsersServices;
         }
-        public  dynamic validarToken(ClaimsIdentity identity)
+        public  dynamic validateToken(ClaimsIdentity Identity)
         {
 			try
 			{
-				if (identity.Claims.Count()==0)
+				if (Identity.Claims.Count()==0)
 				{
-					return new { Validacion = false,
-								Mesagge = "No Viene Token",
-                                Result=""
-								};
+					return new 
+                    {
+                        Validacion = false,
+                        Mesagge = "No Viene Token",
+                        Result=""
+                    };
 				}
-                var Id = identity.Claims.FirstOrDefault(x=>x.Type=="Id").Value;
+                var Id = Identity.Claims.FirstOrDefault(x=>x.Type=="Id").Value;
                 var Registers =  _UsersService.GetUserValidation(Id);
                 if (Registers is null)
                 {

@@ -25,8 +25,8 @@ namespace WSDISCOUNT.Controllers
             try
             {
                 var Identity = HttpContext.User.Identity as ClaimsIdentity;
-                TokenServices tokenServices = new TokenServices(_UsersService);
-                var Token = tokenServices.validarToken(Identity);
+                TokenServices TokenServices = new TokenServices(_UsersService);
+                var Token = TokenServices.validateToken(Identity);
                 if (!Token.Validacion)
                 {
                    return Ok(Token);
@@ -36,8 +36,7 @@ namespace WSDISCOUNT.Controllers
                 {
                     return NotFound(new
                     {
-                        title = $"No Se Encontro Descuentos Para {discount.Consola}",
-                        status = 404,
+                        title = $"No Se Encontro Descuentos Para {discount.Consola}"
                     });
                 }
                 if (discount.valor >= registroDescuento.Minimal_price && registroDescuento.Maximum_price <= discount.valor)
@@ -56,7 +55,6 @@ namespace WSDISCOUNT.Controllers
                     }
                     return Ok(new { ValorCobrarCliente = "Error al Registrar la Venta" });
                 }
-
                 return Ok(new { ValorCobrarCliente = "No Tiene Descuento" });
             }
             catch (Exception e)
